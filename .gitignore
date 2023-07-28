@@ -1,0 +1,7 @@
+.idea
+.terraform
+terraform.tfstate*
+.terraform.*
+.DS_Store
+/seed*
+*.ini
