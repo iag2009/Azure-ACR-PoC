@@ -11,9 +11,9 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "bpa-devops-rg"
-    storage_account_name = "bpatfstatestore"
+    storage_account_name = "bpatfstatestorekyiv"
     container_name       = "terraform-state"
-    key                  = "bpa.infra.veeam.tfstate"
+    key                  = "bpa.infra.acr.tfstate"
   }
 }
 
