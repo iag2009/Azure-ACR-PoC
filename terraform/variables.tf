@@ -1,33 +1,53 @@
 variable "project" {
-  type    = string
+  type        = string
   description = "project name"
-  
+
 }
 variable "environment" {
-  type    = string
+  type        = string
   description = "project environment (poc, prod)"
 }
 
 variable "location" {
-  type    = string
+  type        = string
   description = "Azure region"
 }
 
-variable "rg_name" {
-  type    = string
-  description = "resource group name"
+variable "subscription_id_prd" {
+  description = "Provide UK subscription id."
+}
+variable "tenant_id_prd" {
+  description = "Provide UK tenant id."
+}
+variable "client_id_prd" {
+  description = "Provide UK client id."
 }
 
 variable "subscription_id" {
-  description = "Provide main subscription id."
-  default     = "6014efee-0ecc-42d2-9874-04fcb1972096"
+  description = "Provide KV subscription id."
 }
-
 variable "tenant_id" {
-  description = "Provide tenant id."
-  default     = "0addea55-b056-465d-b7a7-f09eb3345933"
+  description = "Provide KV tenant id."
+}
+variable "client_id" {
+  description = "Provide KV client id."
 }
 
-variable "client_id" {
-  description = "Provide client id."
+variable "sp_object_id" {
+  description = "Provide service principal object_id of a user, service principal or security group."
+}
+
+variable "env_resource_group_name" {
+  type        = string
+  description = "project resource group"
+}
+
+variable "net_resource_group_name" {
+  type        = string
+  description = "network resource group owned by IT"
+}
+
+variable "devops_resource_group_name" {
+  type        = string
+  description = "Infrastructure resource group, like Container registry, backups, tf state, dns. The same as BPADO-Infrastructure"
 }
