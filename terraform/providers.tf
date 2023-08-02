@@ -21,7 +21,7 @@ terraform {
     resource_group_name  = "bpa-devops-rg"
     storage_account_name = "bpatfstatestore"
     container_name       = "terraform-state"
-    key                  = "bpa.infra.acr.tfstate"
+    key                  = "bpa.infra.acrpoc.tfstate"
     # Use Subscription pointed by ARM_ACCESS_KEY, not by provider "azurerm"
   }
 }
