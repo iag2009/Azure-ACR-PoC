@@ -54,3 +54,11 @@ variable "devops_resource_group_name" {
   type        = string
   description = "Infrastructure resource group, like Container registry, backups, tf state, dns. The same as BPADO-Infrastructure"
 }
+variable "networkSubnet" {
+  type = string
+  description = "Network Subnet"
+}
+variable "networkName" {
+  type = string 
+  description = "network Name"
+}

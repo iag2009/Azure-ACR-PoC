@@ -1,17 +1,6 @@
-locals {
-  tags = {
-    project = "ACR"
-    created = "terraform"
-    owner   = "ailves"
-  }
-}
-
-# Datasource-1: To get Azure Tenant Id
-data "azurerm_client_config" "current" {}
-
 # Azure Key Vault
 resource "azurerm_key_vault" "keyvault" {
-  name                            = "bpa-vault-acr"
+  name                            = "${var.system_name}-${var.project}-vault"
   location                        = var.location
   resource_group_name             = var.devops_resource_group_name
   enabled_for_disk_encryption     = true
@@ -26,6 +15,7 @@ resource "azurerm_key_vault" "keyvault" {
     default_action = "Allow"
     bypass         = "AzureServices"
   }
+  depends_on = [ azurerm_resource_group.env_rg ]
 }
 
 # Azure Key Vault access policy with Admin permissions for Terraform Service Principal

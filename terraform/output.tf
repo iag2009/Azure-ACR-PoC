@@ -23,9 +23,9 @@ output "azurerm_storage_account" {
   sensitive   = true
 }
 output "network_interface_id_poc_vm1" {
-  value = azurerm_network_interface.poc_vm1_network_interface.id
+  value = azurerm_network_interface.acr_vm1_network_interface.id
 }
 
 output "network_interface_private_ip_address_poc_vm1" {
-  value = azurerm_network_interface.poc_vm1_network_interface.private_ip_address
+  value = azurerm_network_interface.acr_vm1_network_interface.private_ip_address
 }
