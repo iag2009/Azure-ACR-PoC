@@ -12,6 +12,10 @@ terraform {
       source  = "hashicorp/random"
       version = ">= 3.0"
     }
+    local = {
+      source  = "hashicorp/local"
+      version = ">= 1.0"
+    }
   }
   backend "azurerm" {
     resource_group_name  = "bpa-devops-rg"

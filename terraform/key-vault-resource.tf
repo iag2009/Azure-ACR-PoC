@@ -46,7 +46,7 @@ resource "azurerm_key_vault_access_policy" "sp_vault_user_access_policy" {
     "Recover",
     "Backup",
     "Restore"
-  ]
+  ] 
   depends_on = [azurerm_key_vault.keyvault]
 }
 
@@ -67,13 +67,4 @@ resource "azurerm_key_vault_access_policy" "sp_vault_app_access_policy" {
     "Delete",
   ]
   depends_on = [azurerm_key_vault.keyvault]
-}
-
-# Managed Key Vault Secret
-resource "azurerm_key_vault_secret" "test" {
-  name         = "pwvm-test"
-  value        = random_password.random_passwords.result
-  key_vault_id = azurerm_key_vault.keyvault.id
-
-  depends_on = [azurerm_key_vault_access_policy.sp_vault_app_access_policy, azurerm_key_vault_access_policy.sp_vault_user_access_policy, time_sleep.wait_15_seconds_shared, random_password.random_passwords]
 }

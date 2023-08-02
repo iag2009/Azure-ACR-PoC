@@ -1,11 +1,14 @@
 variable "project" {
   type        = string
   description = "project name"
-
 }
-variable "environment" {
+variable "system_name" {
+  type = string
+  description = "System name (bpa, spa, ssd, st2, st3)"
+}
+variable "env_name" {
   type        = string
-  description = "project environment (poc, prod)"
+  description = "project environment (poc, infra, prd)"
 }
 
 variable "location" {

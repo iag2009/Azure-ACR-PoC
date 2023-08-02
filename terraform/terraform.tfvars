@@ -1,6 +1,7 @@
 location                   = "westeurope"          // Region to create all the resources in.
-environment                = "PoC"                 // Proof of Concept environment
-project                    = "ACR"                 // Azure Azure Container Registry PoC
+env_name                   = "poc"                 // Proof of Concept environment
+project                    = "acr"                 // Azure Azure Container Registry PoC
+system_name                = "bpa"
 devops_resource_group_name = "bpa-devops-rg"       // Azure RG
 net_resource_group_name    = "BPASB-Networking-rg" // Network RG
 env_resource_group_name    = "acr-test-rg"         // Project RG
