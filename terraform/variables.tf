@@ -3,7 +3,7 @@ variable "project" {
   description = "project name"
 }
 variable "system_name" {
-  type = string
+  type        = string
   description = "System name (bpa, spa, ssd, st2, st3)"
 }
 variable "env_name" {

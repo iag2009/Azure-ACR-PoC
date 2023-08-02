@@ -46,7 +46,7 @@ resource "azurerm_key_vault_access_policy" "sp_vault_user_access_policy" {
     "Recover",
     "Backup",
     "Restore"
-  ] 
+  ]
   depends_on = [azurerm_key_vault.keyvault]
 }
 
